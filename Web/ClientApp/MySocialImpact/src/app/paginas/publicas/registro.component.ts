@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
+  message: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  /**
+   * registrarUsuario
+   */
+  public registrarUsuario() {
+    this.message = "Vamos registrar o usuario.";
   }
 
 }

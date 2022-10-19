@@ -1,3 +1,32 @@
-<p>registro works!</p>
+<div class="container-fluid border p-4 mt-5">
 
-<h1>This is my Registro</h1>
+  <h4>Dados do Usuario</h4>
+  <form>
+    <div class="mb-3">
+      <label for="inputFirstName" class="form-label">Primeiro Nome</label>
+      <input type="text" class="form-control" id="inputFirstName">
+    </div>
+    <div class="mb-3">
+      <label for="inputLastName" class="form-label">Ultimo Nome</label>
+      <input type="text" class="form-control" id="inputLastName">
+    </div>
+    <div class="mb-3">
+      <label for="inputEmail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="inputPhone" class="form-label">Celular</label>
+      <input type="text" class="form-control" id="inputPhone" placeholder="ex. DDD 99999-9999">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="registrarUsuario()">Fazer Registro</button>
+    
+    <div *ngIf="message" class="form-text">
+      Test massage is: {{ message }}
+    </div>
+  </form>
+</div>
