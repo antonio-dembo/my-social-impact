@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { RouterModule } from '@angular/router';
@@ -14,11 +15,12 @@ import { WelcomeComponent } from './paginas/publicas/welcome.component';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: 'registro', component: RegistroComponent},
-      { path: 'welcome', component: WelcomeComponent},
       { path: '', redirectTo: '/welcome', pathMatch: 'full'},
-      { path: '**', redirectTo: '/welcome', pathMatch: 'full'}
+      { path: 'registro', component: RegistroComponent},
+      { path: 'welcome', component: WelcomeComponent},      
+      //{ path: '**', redirectTo: '/welcome', pathMatch: 'full'}
      ])
   ],
   bootstrap: [AppComponent]

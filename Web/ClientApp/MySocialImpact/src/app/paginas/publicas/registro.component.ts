@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'msi-registro',
@@ -7,17 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroComponent implements OnInit {
   message: string = '';
+  
+  checkoutForm = this.formBuilder.group({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: ''
+  })
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }
 
-  /**
-   * registrarUsuario
-   */
-  public registrarUsuario() {
+  public registerUser() {
+    console.warn("Your order has been submitted ", this.checkoutForm.value);
+    
     this.message = "Vamos registrar o usuario.";
+
   }
 
 }
