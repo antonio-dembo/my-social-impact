@@ -10,6 +10,8 @@ import { RegistrationService } from 'src/app/Service/Registration/registration.s
 })
 export class RegistroComponent implements OnInit {
   message: string = '';
+  tipoUsuario = '' ;
+  
   
   checkoutForm = this.formBuilder.group({
     firstName: '',
@@ -17,8 +19,9 @@ export class RegistroComponent implements OnInit {
     email: '',
     password: '',
     role: ''
-  })
-
+  });
+  
+  
   constructor(
     private registrationService: RegistrationService,
     private formBuilder: FormBuilder

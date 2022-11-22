@@ -1,48 +1,41 @@
-<div class="card">
-    <div class="card-header">
-      <h1>Obrigado por se juntar a causa!! </h1>
+<div class="row justify-content-center" style="width: 50rem;">
+
+  <h1>Obrigado por se juntar a causa!! </h1>
+
+  <form [formGroup]="checkoutForm" (ngSubmit)="registerUser()" class="row g-3">
+    <div class="col-md-4">
+      <label for="inputEmail" class="form-label">Primeiro Nome</label>
+      <input type="text" formControlName="firstName" class="form-control" id="inputFirstName">
     </div>
-    <div class="card-body">
-      <form [formGroup]="checkoutForm" (ngSubmit)="registerUser()">
-        <div class="col-auto">
-          <div class="row col-8">
-            <label for="inputEmail" class="form-label">Primeiro Nome</label>
-            <input type="text" formControlName="firstName" class="form-control" id="inputFirstName">
-          </div>
 
-          <div class="row col-8">
-            <label for="inputLastName" class="form-label">Ultimo Nome</label>
-            <input id="inputLastName" type="text" formControlName="lastName" class="form-control">
-          </div>
-
-          <div  class="row col-8">
-            <label for="inputEmail" class="form-label">Email</label>
-            <input type="email" formControlName="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-          </div>
-
-          <div  class="row col-8">
-            <label for="inputPassword" class="form-label">Senha</label>
-            <input type="password" formControlName="password" class="form-control" id="inputPassword" placeholder="senha">
-          </div>
-
-          <div  class="row col-8">
-            <label for="inputRole" class="form-label">Tipo de registro</label>
-            <input type="text" formControlName= "role" class="form-control" id="inputRole" placeholder="Usuario">
-          </div>
-        </div>
-        
-        <div>
-          <button type="submit" class="btn btn-primary" >Fazer Registro</button>
-        </div>
-        
-
-      </form>
-
+    <div class="col-md-4">
+      <label for="inputLastName" class="form-label">Ultimo Nome</label>
+      <input id="inputLastName" type="text" formControlName="lastName" class="form-control">
     </div>
+
+    <div class="col-md-8">
+      <label for="inputEmail" class="form-label">Email</label>
+      <input type="email" formControlName="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+    <div class="col-md-8">
+      <label for="inputPassword" class="form-label">Senha</label>
+      <input type="password" formControlName="password" class="form-control" id="inputPassword" placeholder="senha">
+    </div>
+
+    <div class="col-md-8">
+      <label for="inputRole" class="form-label">Tipo de registro</label>
+      <input type="text" formControlName="role" class="form-control" id="inputRole" placeholder="Usuario">
+    </div>
+
+    <div class="col-6">
+      <button [disabled]="!this.checkoutForm.valid"
+      type="submit" class="btn btn-primary">Fazer Registro</button>
+    </div>
+  </form>
+
 </div>
-
-
 
 <div *ngIf="message" class="form-text">
   Test massage is: {{ message }}
