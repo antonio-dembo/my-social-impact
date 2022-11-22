@@ -1,0 +1,18 @@
+[
+    {
+        "id":"1",
+        "firstName":"FirstAdmin",
+        "lastName":"LastAdmin",
+        "email":"admin@test.com",
+        "senha":"123",
+        "role":"admin"
+    },
+    {
+        "id":"2",
+        "firstName":"FirstAna",
+        "lastName":"LastAna",
+        "email":"user@test.com",
+        "senha":"111",
+        "role":"user"
+    }
+]
