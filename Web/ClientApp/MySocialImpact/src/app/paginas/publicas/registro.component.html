@@ -3,9 +3,9 @@
   <h4>Obrigado por se juntar a causa!! </h4>
 
   <form [formGroup]= "checkoutForm" (ngSubmit) ="registerUser()">
-    <div class="mb-3 mt-5">
-      <label for="inputEmail" class="form-label">Primeiro Nome</label>
-      <input type="text" formControlName= "firstName" class="form-control" id="inputFirstName">
+    <div>
+      <label for="inputEmail" class="from-control">Primeiro Nome</label>
+      <input type="text" class="form-control" formControlName= "firstName" id="inputFirstName">
     </div>
 
     <div class="mb-3">
@@ -24,7 +24,12 @@
       <input type="password" formControlName= "password" class="form-control" id="inputPassword" placeholder="senha">
     </div>
 
-    <button type="submit" class="btn btn-primary">Fazer Registro</button>
+    <div class="mb-3">
+      <label for="inputRole" class="form-label">Tipo de registro</label>
+      <input type="text" formControlName= "role" class="form-control" id="inputRole" placeholder="Usuario">
+    </div>
+
+    <button type="submit" class="btn btn-primary" >Fazer Registro</button>
         
   </form>
 
