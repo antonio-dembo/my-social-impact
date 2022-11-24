@@ -7,12 +7,14 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { RegistroComponent } from './paginas/registro/registro.component';
 import { WelcomeComponent } from './paginas/home/welcome.component';
+import { ProjectListComponent } from './paginas/projeto/project-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ProjectListComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,7 @@ import { WelcomeComponent } from './paginas/home/welcome.component';
       { path: '', redirectTo: '/welcome', pathMatch: 'full'},
       { path: 'registro', component: RegistroComponent},
       { path: 'welcome', component: WelcomeComponent},      
-      //{ path: '**', redirectTo: '/welcome', pathMatch: 'full'}
+      { path: 'projects', component: ProjectListComponent}
      ])
   ],
   bootstrap: [AppComponent]
