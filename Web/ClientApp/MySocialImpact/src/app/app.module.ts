@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule} from '@angular/common/http';
 
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { RegistroComponent } from './paginas/publicas/registro.component';
-import { WelcomeComponent } from './paginas/publicas/welcome.component';
+import { RegistroComponent } from './paginas/registro/registro.component';
+import { WelcomeComponent } from './paginas/home/welcome.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { WelcomeComponent } from './paginas/publicas/welcome.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/welcome', pathMatch: 'full'},

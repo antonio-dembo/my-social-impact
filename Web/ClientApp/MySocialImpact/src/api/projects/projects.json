@@ -1,0 +1,20 @@
+[
+    {
+        "projectId": 1,
+        "projectName": "Leaf Lake",
+        "projectAttendee": [],
+        "projectOwner": 1,
+        "releaseDate": "March 18, 2021",
+        "description": "Leaf rake with 48-inch wooden handle.",
+        "imageUrl": "assets/images/leaf_lake.png"
+    },
+    {
+        "projectId": 2,
+        "projectName": "Garden Cart",
+        "projectAttendee": [],
+        "projectOwner": null,
+        "releaseDate": "March 18, 2021",
+        "description": "Leaf rake with 48-inch wooden handle.",
+        "imageUrl": "assets/images/hammer.png"
+    }
+]

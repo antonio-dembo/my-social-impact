@@ -1,6 +1,6 @@
 [
     {
-        "id":"1",
+        "userId":"1",
         "firstName":"FirstAdmin",
         "lastName":"LastAdmin",
         "email":"admin@test.com",
@@ -8,7 +8,7 @@
         "role":"admin"
     },
     {
-        "id":"2",
+        "userId":"2",
         "firstName":"FirstAna",
         "lastName":"LastAna",
         "email":"user@test.com",
