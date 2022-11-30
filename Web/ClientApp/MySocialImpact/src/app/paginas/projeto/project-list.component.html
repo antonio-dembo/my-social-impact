@@ -1,3 +1,66 @@
 <p>project-list works!</p>
 
 <div> Welcome to {{ pageTitle }}</div>
+
+<div class="card">
+    <h5 class="card-header"> {{ pageTitle }}</h5>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">Filter By:</div>
+            <div class="col-md-3">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row" *ngIf="listFilter">
+            <div class="col-md-6">
+                <h4>Filtered by: {{ listFilter }}</h4>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="true">All Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" disabled="disabled">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="text-center">
+                    <h5 class="card-title">Lorem ipsum dolor</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn btn-primary">Go Somewhere</a>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card mb-3 mt-3">
+                            <img src="assets/images/como-criar-ongs.png" class="card-image-top" 
+                                alt="social-entreoneurship">
+                            <div class="card-body">
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                <p class="card-text"><small>updated 3 mins ago.</small></p>
+                                
+                                <button id="participateBtn" class="btn btn-primary btn-sm"
+                                        (click)="participateToProject()">
+                                        <!-- <img src="./fav.png" style="height: 18px;width: 18px;" title="Bookmark"> -->
+                                        Participate
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
