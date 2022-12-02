@@ -20,4 +20,9 @@ export class ProjectListComponent implements OnInit {
     
   }
 
+  selectMyTab(){
+    const triggerTabList: NodeListOf<Element> = document.querySelectorAll("#myTab button");
+
+  }
+
 }
