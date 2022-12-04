@@ -1,95 +1,96 @@
-<p>project-list works!</p>
-
-<div> Welcome to {{ pageTitle }}</div>
-
-<div class="card">
-    <h5 class="card-header"> {{ pageTitle }}</h5>
+<div class="card border-light mt-3">
+    <h4 class="card-header"> {{ pageTitle }}</h4>
     <div class="card-body">
-        <div class="row">
-            <div class="col-md-2">Filter By:</div>
-            <div class="col-md-3">
-                <input type="text" class="form-control">
+        <div class="row g-2 align-items-center">
+            <div class="col-auto">
+                <label for="inputFilter" class="col-form-label">Filter By</label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="inputFilter" class="form-control">
             </div>
         </div>
-        <div class="row" *ngIf="listFilter">
+        <div class="row" *NgIf="listFilter">
             <div class="col-md-6">
                 <h4>Filtered by: {{ listFilter }}</h4>
             </div>
         </div>
+        <div class="mt-5">
+            <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs" id="myTab">
+                <li [ngbNavItem]="1" role="presentation">
+                    <a ngbNavLink>All Projects</a>
+                    <ng-template ngbNavContent>
+                        <p>
+                            Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown
+                            aliqua, retro synth
+                            master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                            butcher retro
+                            keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid.
+                            Aliquip placeat
+                            salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi
+                            qui.
+                        </p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card mb-3 mt-3">
+                                    <img src="assets/images/como-criar-ongs.png" class="card-image-top"
+                                        height="250"
+                                        alt="social-entreoneurship">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card Title</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit, sed do
+                                            eiusmod tempor incididunt.</p>
+                                        <p class="card-text"><small>updated 3 mins ago.</small></p>
 
-        <div>
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="all-projects-tab" data-bs-toggle="tab" data-bs-target="#all-projects-tab-pane" type="button" role="tab" aria-controls="all-projects-tab-pane" aria-selected="true">All Progects</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="my-projects-tab" data-bs-toggle="tab" data-bs-target="#my-projects-tab-pane" type="button" role="tab" aria-controls="my-projects-tab-pane" aria-selected="false">My Projects</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
-                  </li>
-            </ul>
-        </div>
-
-
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="all-projects-tab-pane" role="tabpanel" aria-labelledby="all-projects-tab" tabindex="0">
-                all projects tab works!!
-            </div>
-            <div class="tab-pane fade" id="my-projects-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                my projects tab pane works!!
-            </div>
-            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
-                <p>disabled tab pane Works</p>                
-            </div>
-        </div>
-
-
-        <div class="card">
-            <div class="card-header">
-                <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="true">All Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#my-projects-tab-pane">My Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" disabled="disabled">Disabled</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-body">
-                <div class="text-center">
-                    <h5 class="card-title">Lorem ipsum dolor</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="#" class="btn btn-primary">Go Somewhere</a>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="card mb-3 mt-3">
-                            <img src="assets/images/como-criar-ongs.png" class="card-image-top"
-                                alt="social-entreoneurship">
-                            <div class="card-body">
-                                <h5 class="card-title">Card Title</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt.</p>
-                                <p class="card-text"><small>updated 3 mins ago.</small></p>
-
-                                <button id="participateBtn" class="btn btn-primary btn-sm"
-                                    (click)="participateToProject()">
-                                    <!-- <img src="./fav.png" style="height: 18px;width: 18px;" title="Bookmark"> -->
-                                    Participate
-                                </button>
-
+                                        <button id="participateBtn" class="btn btn-primary btn-sm"
+                                            (click)="participateToProject()">
+                                            Participate
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                
-            </div>
+                    </ng-template>
+                </li>
+                <li ngbNavItem="2">
+                    <a ngbNavLink>My Projects</a>
+                    <ng-template ngbNavContent>
+                        <p>
+                            Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan
+                            four loko
+                            farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk
+                            aliquip jean shorts
+                            ullamco ad vinyl cillum PBR.
+                        </p>
+                    </ng-template>
+
+                </li>
+                <li ngbNavItem [disabled]="true">
+                    <a ngbNavLink>I'm disabled</a>
+                    <ng-template ngbNavContent>
+                        <p>
+                            Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id
+                            diam. Nulla facilisi.
+                            Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt
+                            eu, congue et odio.
+                            Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices
+                            et. Sed diam urna,
+                            egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus
+                            faucibus nisl enim, nec
+                            tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius
+                            natoque penatibus et
+                            magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet
+                            ultricies in eget
+                            neque. Phasellus nec tortor vel tellus pulvinar feugiat.
+                        </p>
+                    </ng-template>
+                </li>
+            </ul>
+
+            <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+            <pre>Active: {{ active }}</pre>
+
         </div>
     </div>
 </div>

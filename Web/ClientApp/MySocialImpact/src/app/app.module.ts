@@ -8,14 +8,14 @@ import { AppComponent } from './app.component';
 import { RegistroComponent } from './paginas/registro/registro.component';
 import { WelcomeComponent } from './paginas/home/welcome.component';
 import { ProjectListComponent } from './paginas/projeto/project-list.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
     WelcomeComponent,
-    ProjectListComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -27,7 +27,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       { path: 'welcome', component: WelcomeComponent},      
       { path: 'projects', component: ProjectListComponent}
      ]),
-    NgbModule
+     ProjectListComponent,
+    //NgbModule
   ],
   bootstrap: [AppComponent]
 })
