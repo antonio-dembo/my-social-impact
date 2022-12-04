@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { RegistroComponent } from './paginas/registro/registro.component';
 import { WelcomeComponent } from './paginas/home/welcome.component';
 import { ProjectListComponent } from './paginas/projeto/project-list.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProjectListComponent } from './paginas/projeto/project-list.component';
       { path: 'registro', component: RegistroComponent},
       { path: 'welcome', component: WelcomeComponent},      
       { path: 'projects', component: ProjectListComponent}
-     ])
+     ]),
+    NgbModule
   ],
   bootstrap: [AppComponent]
 })
