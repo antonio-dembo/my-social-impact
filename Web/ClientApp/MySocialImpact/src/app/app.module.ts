@@ -25,7 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
-     ProjectListComponent,
+    ProjectListComponent,
     //NgbModule
   ],
   bootstrap: [AppComponent]
