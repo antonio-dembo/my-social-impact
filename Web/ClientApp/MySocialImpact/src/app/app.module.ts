@@ -9,6 +9,7 @@ import { RegistroComponent } from './paginas/registro/registro.component';
 import { WelcomeComponent } from './paginas/home/welcome.component';
 import { ProjectListComponent } from './paginas/projeto/project-list.component';
 import { UserLoginComponent } from './paginas/login/user-login.component';
+import { AppRoutingModule } from './app-routing.module';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -23,12 +24,7 @@ import { UserLoginComponent } from './paginas/login/user-login.component';
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', redirectTo: '/welcome', pathMatch: 'full'},
-      { path: 'registro', component: RegistroComponent},
-      { path: 'welcome', component: WelcomeComponent},      
-      { path: 'projects', component: ProjectListComponent}
-     ]),
+    AppRoutingModule,
      ProjectListComponent,
     //NgbModule
   ],
