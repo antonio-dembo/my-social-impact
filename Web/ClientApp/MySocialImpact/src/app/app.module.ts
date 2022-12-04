@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { RegistroComponent } from './paginas/registro/registro.component';
 import { WelcomeComponent } from './paginas/home/welcome.component';
 import { ProjectListComponent } from './paginas/projeto/project-list.component';
+import { UserLoginComponent } from './paginas/login/user-login.component';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { ProjectListComponent } from './paginas/projeto/project-list.component';
     AppComponent,
     RegistroComponent,
     WelcomeComponent,
+    UserLoginComponent,
     
   ],
   imports: [
