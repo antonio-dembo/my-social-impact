@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './paginas/home/welcome.component';
 import { UserLoginComponent } from './paginas/login/user-login.component';
+import { ProjectDetailComponent } from './paginas/projeto/project-detail.component';
 import { ProjectListComponent } from './paginas/projeto/project-list.component';
 import { RegistroComponent } from './paginas/registro/registro.component';
 
@@ -10,7 +11,8 @@ const routes: Routes = [
   { path: 'registro', component: RegistroComponent},
   { path: 'welcome', component: WelcomeComponent},      
   { path: 'projects', component: ProjectListComponent},
-  { path: 'login', component: UserLoginComponent}
+  { path: 'login', component: UserLoginComponent},
+  { path: 'project-detail', component: ProjectDetailComponent}
  ];
 
 @NgModule({
