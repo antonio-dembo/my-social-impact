@@ -10,6 +10,7 @@ import { WelcomeComponent } from './paginas/home/welcome.component';
 import { ProjectListComponent } from './paginas/projeto/project-list.component';
 import { UserLoginComponent } from './paginas/login/user-login.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProjectDetailComponent } from './paginas/projeto/project-detail.component';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
     RegistroComponent,
     WelcomeComponent,
     UserLoginComponent,
+    ProjectDetailComponent,
     
   ],
   imports: [
