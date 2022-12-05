@@ -34,8 +34,9 @@
                 placeholder="senha">
             </div>
             <div class="col-md-8">
-              <label for="inputRole" class="form-label">Tipo de registro</label>
-              <input type="text" formControlName="role" class="form-control" id="inputRole" placeholder="Usuario">
+              <label for="inputRole" class="form-label">Tipo de login</label>
+              <input type="text" formControlName="role" class="form-control" id="inputRole" placeholder="Usuario"
+              readonly>
             </div>
             <div class="col-6">
               <button [disabled]="!this.checkoutForm.valid" type="submit" class="btn btn-primary">Fazer

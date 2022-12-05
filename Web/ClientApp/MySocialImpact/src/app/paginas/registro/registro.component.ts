@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { IUser } from 'src/app/paginas/registro/user';
 import { RegistrationService } from 'src/app/Service/registration.service';
 
@@ -23,7 +24,8 @@ export class RegistroComponent implements OnInit {
   
   constructor(
     private registrationService: RegistrationService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -32,6 +34,7 @@ export class RegistroComponent implements OnInit {
   public registerUser() {
     this.registrationService.registerUser(this.checkoutForm.value as IUser);
     window.alert("The user has been registered!!");
+    this.router.navigate(['/login']);
     //console.warn("The user has been registered. ", this.checkoutForm.value);
   }
 

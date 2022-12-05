@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { projects } from './data';
+import { IProject } from './project';
 
 @Component({
   selector: 'msi-project-list',
@@ -14,19 +17,33 @@ export class ProjectListComponent implements OnInit {
   listFilter = 'name';
   enableParticipateBtn: boolean = false;
 
-  constructor() { }
+  projetos: IProject[] = [{
+    projectId: 1,
+    projectName: "Leaf Lake",
+    projectAttendee: 2,
+    projectOwner: "1",
+    releaseDate: "March 18, 2021",
+    description: "Leaf rake with 48-inch wooden handle.",
+    imageUrl: "assets/images/como-criar-ongs.png"
+  }];
+
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  participateToProject(){
+  participateToProject() {
     window.alert("Add logic to participate to this project.");
-    
+
   }
 
-  selectMyTab(){
+  selectMyTab() {
     const triggerTabList: NodeListOf<Element> = document.querySelectorAll("#myTab button");
 
+  }
+
+  openProjectDetail(){
+    this.router.navigate(['/project-detail']);
   }
 
 }

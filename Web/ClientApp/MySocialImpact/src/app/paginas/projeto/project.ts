@@ -1,9 +1,9 @@
 import { IUser } from "../registro/user";
 
 export interface IProject {
-    projectId: string,
+    projectId: number,
     projectName: string,
-    projectAttendee: IUser[],
+    projectAttendee: number,
     projectOwner: string,
     releaseDate: string,
     description: string,

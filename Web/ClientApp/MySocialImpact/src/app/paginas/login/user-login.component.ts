@@ -26,6 +26,7 @@ export class UserLoginComponent implements OnInit {
   login(){
     console.log(`Data login: email: ${this.formLogin.value.email} Password: ${this.formLogin.value.password}` );
     window.alert("User login triggered.");
+    this.router.navigate(['/projects']);
   }
 
   registerAsUser(){
