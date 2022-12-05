@@ -32,8 +32,7 @@
                         <div class="row justify-content-center">
                             <div class="col-md-6">
                                 <div class="card mb-3 mt-3">
-                                    <img src="assets/images/como-criar-ongs.png" class="card-image-top"
-                                        height="250"
+                                    <img src="assets/images/como-criar-ongs.png" class="card-image-top" height="250"
                                         alt="social-entreoneurship">
                                     <div class="card-body">
                                         <h5 class="card-title">Card Title</h5>
@@ -41,18 +40,18 @@
                                             adipiscing elit, sed do
                                             eiusmod tempor incididunt.</p>
                                         <p class="card-text"><small>updated 3 mins ago.</small></p>
-                                        
+
                                         <div class="d-grid gap-2 d-md-block">
                                             <button id="participateBtn" class="btn btn-primary btn-sm me-md-2"
-                                                (click)="participateToProject()">
-                                                Participate
+                                                (click)="participateToProject()" [disabled]="desableParticipar">
+                                                Participar
                                             </button>
                                             <button id="participateBtn" class="btn btn-primary btn-sm"
                                                 (click)="openProjectDetail()">
                                                 Detalhe do projeto
                                             </button>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -72,8 +71,7 @@
                         <div class="row justify-content-center">
                             <div class="col-md-6">
                                 <div class="card mb-3 mt-3">
-                                    <img src="assets/images/como-criar-ongs.png" class="card-image-top"
-                                        height="250"
+                                    <img src="assets/images/como-criar-ongs.png" class="card-image-top" height="250"
                                         alt="social-entreoneurship">
                                     <div class="card-body">
                                         <h5 class="card-title">Card Title</h5>
@@ -83,6 +81,11 @@
                                         <p class="card-text"><small>updated 3 mins ago.</small></p>
 
                                         <p class="card-text">Projeto de andamento.</p>
+
+                                        <button id="participateBtn" class="btn btn-primary btn-sm"
+                                            (click)="openProjectDetail()">
+                                            Detalhe do projeto
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +93,7 @@
                     </ng-template>
 
                 </li>
-                <li ngbNavItem [disabled]="true">
+                <!-- <li ngbNavItem [disabled]="true">
                     <a ngbNavLink>I'm disabled</a>
                     <ng-template ngbNavContent>
                         <p>
@@ -109,7 +112,7 @@
                             neque. Phasellus nec tortor vel tellus pulvinar feugiat.
                         </p>
                     </ng-template>
-                </li>
+                </li> -->
             </ul>
 
             <div [ngbNavOutlet]="nav" class="mt-2"></div>

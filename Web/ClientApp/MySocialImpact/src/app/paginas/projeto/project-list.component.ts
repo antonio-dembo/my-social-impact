@@ -27,14 +27,18 @@ export class ProjectListComponent implements OnInit {
     imageUrl: "assets/images/como-criar-ongs.png"
   }];
 
+  desableParticipar = false;
+
   constructor( private router: Router) { }
 
   ngOnInit(): void {
   }
 
   participateToProject() {
-    window.alert("Add logic to participate to this project.");
-
+    window.alert("Usuario inscrito com sucesso.");
+    if(!this.desableParticipar){
+      this.desableParticipar = true;
+    }
   }
 
   selectMyTab() {
@@ -45,5 +49,7 @@ export class ProjectListComponent implements OnInit {
   openProjectDetail(){
     this.router.navigate(['/project-detail']);
   }
+
+
 
 }
