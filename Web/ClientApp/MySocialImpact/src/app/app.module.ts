@@ -3,7 +3,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
 
-import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { RegistroComponent } from './paginas/registro/registro.component';
 import { WelcomeComponent } from './paginas/home/welcome.component';
@@ -11,6 +10,7 @@ import { ProjectListComponent } from './paginas/projeto/project-list.component';
 import { UserLoginComponent } from './paginas/login/user-login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProjectDetailComponent } from './paginas/projeto/project-detail.component';
+import { NgbdCollapseNavbar } from './shared/components/collapse-navbar.component';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -20,7 +20,6 @@ import { ProjectDetailComponent } from './paginas/projeto/project-detail.compone
     WelcomeComponent,
     UserLoginComponent,
     ProjectDetailComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -28,6 +27,7 @@ import { ProjectDetailComponent } from './paginas/projeto/project-detail.compone
     ReactiveFormsModule,
     AppRoutingModule,
     ProjectListComponent,
+    NgbdCollapseNavbar
     //NgbModule
   ],
   bootstrap: [AppComponent]

@@ -1,28 +1,5 @@
-<!-- Navbar -->
-<nav class='navbar navbar-expand navbar-light bg-light'>
-  <div class="container-fluid">
-    <a class='navbar-brand'>{{pageTitle}}</a>
-
-    <ul class='nav nav-pills me-auto mb-2 mb-lg-0'>
-      <li class="nav-item">
-        <a class='nav-link' routerLinkActive='active' routerLink='/welcome'>Welcome</a>
-      </li>
-      <li class="nav-item">
-        <a class='nav-link' routerLinkActive='active' routerLink='/registro'>Registro</a>
-      </li>
-      <li class="nav-item">
-        <a class='nav-link' routerLinkActive='active' routerLink='/projects'>Project List</a>
-      </li>
-      <li class="nav-item">
-        <a class='nav-link' routerLinkActive='active' routerLink='/login'>Login</a>
-      </li>
-      <li class="nav-item">
-        <a class='nav-link' routerLinkActive='active' routerLink='/project-detail'>Project Detail</a>
-      </li>
-    </ul>
-  </div>
-  
-</nav>
+<!-- Nested component-->
+<ngbd-collapse-navbar [pageTitle]="pageTitle"></ngbd-collapse-navbar>
 
 <div class='container' role="banner">
   <router-outlet></router-outlet>
