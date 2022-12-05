@@ -1,1 +1,78 @@
-<p>project-detail works!</p>
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle }}
+  </div>
+
+  <div class='card-body'>
+    <img class='card-image-top center-block img-responsive' src="assets/images/como-criar-ongs.png"
+      [style.width.px]='300' [style.margin.px]='2' alt="...">
+    <!-- [title]='product.productName'> -->
+    <div class='row gap-2 mt-3'>
+
+      <div class='row'>
+        <label for="divProjectName" class="col-sm-2 col-form-label col-form-label-sm">
+          Projeto:</label>
+        <div class='col-auto'>
+          <div id="divProjectName">Lorem ipsum dolor</div>
+        </div> 
+      </div>
+      <div class='row'>
+        <label for="divProjectName" class="col-sm-2 col-form-label col-form-label-sm">Instituicao:</label>
+        <div class='col-auto'>
+          <div id="divProjectName">Consectetur Adipiscing</div>
+        </div> 
+      </div>
+      <div class='row'>
+
+        <label for="divProjectName" class="col-sm-2 col-form-label col-form-label-sm">Descricao:</label>
+        <div class='col-auto'>
+          <div id="divProjectName">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt.</div>
+        </div> 
+
+      </div>
+      <div class='row'>
+
+        <label for="divProjectName" class="col-sm-2 col-form-label col-form-label-sm">Disponibilidade:</label>
+        <div class='col-auto'>
+          <div id="divProjectName">16-ago-2022</div>
+        </div> 
+      </div>
+
+      <div class='row'>
+        <label for="divProjectName" class="col-sm-2 col-form-label col-form-label-sm">Status:</label>
+        <div class='col-auto'>
+          <div id="divProjectName">Ativo</div>
+        </div> 
+      </div>
+      <div class='row'>
+        <label for="divProjectName" class="col-sm-2 col-form-label col-form-label-sm">Inicio:</label>
+        <div class='col-auto'>
+          <div id="divProjectName" >11-mar-2022</div>
+        </div> 
+
+      </div>
+      <div class='row'>
+        <label for="divProjectName" class="col-sm-2 col-form-label col-form-label-sm">Horas voluntariado:</label>
+        <div class='col-auto'>
+          <div id="divProjectName">02:30</div>
+        </div> 
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-md-4">
+          <h4>Atividades</h4>
+          <textarea class="form-control form-control-lg" name="activities" id="textareaActivities"
+            placeholder="descreva as atividades aqui." area-label="With textarea" rows="4"></textarea>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='card-footer'>
+    <button class='btn btn-outline-secondary' style='width:80px' (click)='onBack()'>
+      <i class='fa fa-chevron-left'></i> Back
+    </button>
+  </div>
+</div>
